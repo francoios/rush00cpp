@@ -2,6 +2,8 @@ CC = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror -Iincludes
 
+NCURSES = -lncurses
+
 NAME = ft_retro
 
 SRCS =	src/Main.cpp\
@@ -20,7 +22,7 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $^
+	$(CC) -o $(NAME) $^ $(NCURSES)
 
 %.o: %.cpp
 	$(CC) -o $@ -c $< $(CXXFLAGS)
