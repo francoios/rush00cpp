@@ -32,7 +32,7 @@ FTime const &		FTime::operator=(FTime const & ref)
 	return (*this);
 }
 
-void				FTime::FTimeUpdate(void)
+void				FTime::update(void)
 {
 	clock_t	timer;
 

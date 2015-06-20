@@ -14,9 +14,9 @@ public:
 	~GameCore();
 
 	GameCore const &	operator=(GameCore const & rhs);
-	void				Update(void);
+	void				update(void);
 
-	//Screen		screen; // Window handling
+	Screen		screen; // Window handling
 	FTime		ftime; // Time/frame handling
 	// ICI TOUTES LES CLASSE PRATIQUE COMME SCREEN, TIME, QUI
 	// SERONT AINSI ACCESSIBLE GRACE A L'INSTANCE DE GAMECORE

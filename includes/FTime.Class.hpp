@@ -12,7 +12,7 @@ public:
 
 	FTime const &	operator=(FTime const & ref);
 
-	void			FTimeUpdate(void);
+	void			update(void);
 
 	float ctime;
 	float deltaTime;
