@@ -3,11 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Screnn.Class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
+/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:09:31 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/06/20 16:16:22 by frcugy           ###   ########.fr       */
+/*   Updated: 2015/06/20 16:09:44 by qmuntada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Screnn.Class.hpp"
