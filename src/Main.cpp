@@ -6,7 +6,7 @@
 /*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:23:12 by frcugy            #+#    #+#             */
-/*   Updated: 2015/06/20 16:42:20 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 16:43:35 by qmuntada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main(void)
 {
-<<<<<<< HEAD
 	int ch;
 
 	initscr();			/* Start curses mode 		*/
@@ -43,10 +42,4 @@ int main(void)
 	endwin();			/* End curses mode		  */
 
 	return (0);
-=======
-
-
-	std::cout <<"bobo" <<std::endl ;
-	return 0;
->>>>>>> e142ecb57e5fc04fb8f63eb9bbd5021d74ea4ea0
 }
