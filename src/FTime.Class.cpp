@@ -1,22 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   FTime.Class.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/06/20 16:23:12 by frcugy            #+#    #+#             */
-/*   Updated: 2015/06/20 16:33:33 by frcugy           ###   ########.fr       */
+/*   Created: 2015/06/20 16:27:53 by frcugy            #+#    #+#             */
+/*   Updated: 2015/06/20 16:32:57 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "GameCore.Class.hpp"
-#include "ncurses.h"
-
-int main(void)
-{
-
-
-	std::cout <<"bobo" <<std::endl ;
-	return 0;
-}
+#include "FTime.Class.hpp"
