@@ -6,40 +6,49 @@
 /*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:23:12 by frcugy            #+#    #+#             */
-/*   Updated: 2015/06/20 18:49:55 by frcugy           ###   ########.fr       */
+/*   Updated: 2015/06/20 20:36:58 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "GameCore.Class.hpp"
 #include <ncurses.h>
+#include <unistd.h>
+
+void	signalHandler(int sig)
+{
+	sig = 0;
+	std::cout << "WINDOW RESIZED" << std::endl;
+	return ;
+}
 
 int main(void)
 {
-	int ch;
+	int ch = 'G';
+	clock_t timer;
+	GameCore game = GameCore();
 
 	initscr();			/* Start curses mode 		*/
-	raw();				/* Line buffering disabled	*/
-	keypad(stdscr, TRUE);		/* We get F1, F2 etc..		*/
-	noecho();			/* Don't echo() while we do getch */
-
-	printw("Type any character to see it in bold\n");
-	ch = getch();			/* If raw() hadn't been called
-							 * we have to press enter before it
-							 * gets to the program 		*/
-	if(ch == KEY_F(1))		/* Without keypad enabled this will */
-		printw("F1 Key pressed");/*  not get to us either	*/
-	/* Without noecho() some ugly escape
-	 * charachters might have been printed
-	 * on screen			*/
-	else
-	{	printw("The pressed key is ");
-		attron(A_BOLD);
-		printw("%c", ch);
-		attroff(A_BOLD);
+	signal(SIGWINCH, signalHandler);
+	start_color();
+	noecho();
+	cbreak();
+	nodelay(stdscr, TRUE); // don't wait for user input
+	keypad(stdscr, TRUE);
+	curs_set(0);
+	init_pair(1, COLOR_RED, COLOR_BLACK);
+	while (1)
+	{
+		game.ftime.FTimeUpdate();
+		timer = clock();
+		//ProcessUserInput
+		//MoveAndAnimateObject
+		//DrawTheScene
+		//WaitForNextFrame
+		ch = getch();
+		wclear(stdscr);
+		//printw("The pressed key is");
+		wrefresh(stdscr);
+		usleep(16666 - (game.ftime.deltaTime / CLOCKS_PER_SEC * 100000));
 	}
-	refresh();			/* Print it on to the real screen */
-	getch();			/* Wait for user input */
-	endwin();			/* End curses mode		  */
-
-	return (0);
+	endwin();
 }
