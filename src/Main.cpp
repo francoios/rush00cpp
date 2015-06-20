@@ -6,7 +6,7 @@
 /*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:23:12 by frcugy            #+#    #+#             */
-/*   Updated: 2015/06/20 20:33:18 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 20:39:59 by qmuntada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	signalHandler(int sig)
 {
 	sig = 0;
-	std::cout << "WINDOW RESIZED" << std::endl;
+	init_pair(1, COLOR_RED, COLOR_WHITE);
 	return ;
 }
 
@@ -38,6 +38,7 @@ int main(void)
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	while (1)
 	{
+		attron(COLOR_PAIR(1));
 		game.ftime.FTimeUpdate();
 		timer = clock();
 		//ProcessUserInput
@@ -46,7 +47,8 @@ int main(void)
 		//WaitForNextFrame
 		ch = getch();
 		wclear(stdscr);
-		//printw("The pressed key is");
+		printw("The pressed key is");
+		printw("%c\n", ch);
 		wrefresh(stdscr);
 		usleep(16666 - (game.ftime.deltaTime / CLOCKS_PER_SEC * 100000));
 	}
