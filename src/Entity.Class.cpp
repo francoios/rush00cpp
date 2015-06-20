@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   Entity.Class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 15:59:22 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/06/20 16:08:59 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 16:15:04 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Entity.Class.hpp"

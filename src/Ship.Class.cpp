@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   Ship.Class.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 15:58:40 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/06/20 16:09:08 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 16:16:30 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Ship.Class.hpp"

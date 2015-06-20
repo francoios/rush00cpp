@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   Enemy.Class.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 15:58:22 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/06/20 16:08:57 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 16:14:53 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Enemy.Class.hpp"

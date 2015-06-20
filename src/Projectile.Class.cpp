@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   Projectile.Class.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:00:16 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/06/20 16:09:06 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 16:16:03 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Projectile.Class.hpp"
