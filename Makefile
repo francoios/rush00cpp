@@ -2,7 +2,7 @@ CC = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror -Iincludes
 
-LDFLAGS =
+NCURSES = -lncurses
 
 NAME = ft_retro
 
@@ -14,15 +14,15 @@ SRCS =	src/Main.cpp\
 		src/Menu.Class.cpp\
 		src/Player.Class.cpp\
 		src/Projectile.Class.cpp\
-		src/Screnn.Class.cpp\
-		src/Ship.Class.cpp
+		src/Screen.Class.cpp\
+		src/Ship.Class.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $^ $(LDFLAGS)
+	$(CC) -o $(NAME) $^ $(NCURSES)
 
 %.o: %.cpp
 	$(CC) -o $@ -c $< $(CXXFLAGS)
