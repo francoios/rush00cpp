@@ -6,7 +6,7 @@ NCURSES = -lncurses
 
 NAME = ft_retro
 
-SRCS =	src/Main.cpp\
+SRCS =	src/Main2.cpp\
 		src/Background.Class.cpp \
 		src/Enemy.Class.cpp\
 		src/Entity.Class.cpp\

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <qmuntada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frcugy <frcugy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:23:12 by frcugy            #+#    #+#             */
-/*   Updated: 2015/06/20 16:43:35 by qmuntada         ###   ########.fr       */
+/*   Updated: 2015/06/20 18:49:55 by frcugy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "GameCore.Class.hpp"
-#include "ncurses.h"
+#include <ncurses.h>
 
 int main(void)
 {
