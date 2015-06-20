@@ -14,9 +14,11 @@ public:
 	Screen const &		operator=(Screen const & ref);
 
 	void				update(void);
+	void				updateSize(void);
 
 	int		x;
 	int		y;
+	bool	isWellSized;
 };
 
 #endif

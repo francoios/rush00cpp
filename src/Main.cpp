@@ -2,19 +2,18 @@
 #include <ncurses.h>
 #include <unistd.h>
 
+static GameCore game = GameCore();
+
 void	signalHandler(int sig)
 {
 	(void)sig;
-	endwin();
-	refresh();
-	clear();
+	game.screen.updateSize();
 	return ;
 }
 
 int main(void)
 {
 	int ch = 'G';
-	GameCore game = GameCore();
 	signal(SIGWINCH, signalHandler);
 	while (1)
 	{

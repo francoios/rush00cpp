@@ -1,6 +1,7 @@
 #include "Screen.Class.hpp"
 #include <ncurses.h>
 
+
 Screen::Screen(void)
 {
 	initscr();
@@ -10,6 +11,8 @@ Screen::Screen(void)
 	nodelay(stdscr, TRUE);
 	keypad(stdscr, TRUE);
 	curs_set(0);
+
+	isWellSized = true;
 
 
 	//COLOR
@@ -42,4 +45,14 @@ void	Screen::update(void)
 {
 	wrefresh(stdscr);
 	wclear(stdscr);
+}
+
+void	Screen::updateSize()
+{
+	endwin();
+	refresh();
+	clear();
+	getmaxyx(stdscr, x, y);
+	printw("%d %d\n", x, y);
+	printf("%d %d\n", x, y);
 }
