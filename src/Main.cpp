@@ -11,19 +11,21 @@ void	signalHandler(int sig)
 	return ;
 }
 
+void	Animate(void)
+{
+	;
+}
+
+
+
 int main(void)
 {
-	int ch = 'G';
 	signal(SIGWINCH, signalHandler);
 	while (1)
 	{
-		//ProcessUserInput
-		//MoveAndAnimateObject
-		//DrawTheScene
-		//WaitForNextFrame
-		ch = getch();
-		printw("The pressed key is ");
-		printw("%d\n", ch);
+		//UserInput();
+		//Animate();
+		//DrawScene();
 		game.update();
 		usleep(16666 - (game.ftime.deltaTime / CLOCKS_PER_SEC * 100000));
 	}

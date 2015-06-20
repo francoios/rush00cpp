@@ -22,11 +22,31 @@ Screen::Screen(void)
 	init_pair(4, COLOR_YELLOW, COLOR_BLACK);
 	init_pair(5, COLOR_WHITE, COLOR_BLACK);
 	getmaxyx(stdscr, x, y);
+	return ;
 }
 
 Screen::Screen(Screen const & rhs)
 {
 	(void)rhs;
+	initscr();
+	start_color();
+	noecho();
+	cbreak();
+	nodelay(stdscr, TRUE);
+	keypad(stdscr, TRUE);
+	curs_set(0);
+
+	isWellSized = true;
+
+
+	//COLOR
+	init_pair(1, COLOR_RED, COLOR_BLACK);
+	init_pair(2, COLOR_BLUE, COLOR_BLACK);
+	init_pair(3, COLOR_MAGENTA, COLOR_BLACK);
+	init_pair(4, COLOR_YELLOW, COLOR_BLACK);
+	init_pair(5, COLOR_WHITE, COLOR_BLACK);
+	getmaxyx(stdscr, x, y);
+	isWellSized = true;
 	return ;
 }
 
@@ -53,6 +73,8 @@ void	Screen::updateSize()
 	refresh();
 	clear();
 	getmaxyx(stdscr, x, y);
-	printw("%d %d\n", x, y);
-	printf("%d %d\n", x, y);
+	if (x < LINE || y < COL)
+		isWellSized = false;
+	else
+		isWellSized = true;
 }
