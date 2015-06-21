@@ -59,7 +59,7 @@ char		**Background::getTab(void) const {
 	return this->_tab;
 }
 
-void				Background::backgroundUpdate() {
+void				Background::update() {
 	int i;
 	int b;
 

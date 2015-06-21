@@ -1,8 +1,8 @@
 #ifndef SCREEN_CLASS_HPP
 # define SCREEN_CLASS_HPP
 
-# define LINE 90
-# define COL 100
+# define LINE 30
+# define COL 50
 
 class Screen
 {

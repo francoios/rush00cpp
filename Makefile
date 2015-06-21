@@ -6,7 +6,7 @@ NCURSES = -lncurses
 
 NAME = ft_retro
 
-SRCS =	src/Main2.cpp\
+SRCS =	src/Main.cpp\
 		src/Background.Class.cpp \
 		src/Enemy.Class.cpp\
 		src/Entity.Class.cpp\
@@ -16,7 +16,7 @@ SRCS =	src/Main2.cpp\
 		src/Projectile.Class.cpp\
 		src/Screen.Class.cpp\
 		src/Ship.Class.cpp\
-		src/FTime.Class.cpp
+		src/FTime.Class.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 

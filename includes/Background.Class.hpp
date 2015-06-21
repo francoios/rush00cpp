@@ -9,7 +9,7 @@ public:
 
 Background const & operator=(Background const & rhs);
 
-void		backgroundUpdate();
+void		update();
 char		**getTab(void) const;
 
 private:
