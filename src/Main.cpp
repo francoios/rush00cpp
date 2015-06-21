@@ -13,16 +13,20 @@ void	signalHandler(int sig)
 
 void	Animate(void)
 {
-	char	**array = new char * [LINE];
+	char	**array;
 	int		c = -1;
-	while (++c < LINE)
-		array[c] = new char [COL];
+	// FIN INIT ARRAY
+
 	array = game.decor.getTab();
+
+	// FIN GET DU DECOR
+
 	c = -1;
 	while (++c < LINE)
 	{
-		printw("%s\n", array[c]);
+		mvprintw(c, 0, "%s\n", array[c]);
 	}
+	// FIN AFFICHAGE
 	return ;
 }
 
@@ -34,9 +38,13 @@ int main(void)
 	while (1)
 	{
 		//UserInput();
-		Animate();
-		//DrawScene();
-		game.update();
+		if (game.screen.isWellSized)
+		{
+			//UserInput();
+			Animate();
+			//DrawScene();
+			game.update();
+		}
 		usleep(16666 - (game.ftime.deltaTime / CLOCKS_PER_SEC * 100000));
 	}
 	endwin();
