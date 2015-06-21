@@ -1,6 +1,6 @@
 #include "Enemy.Class.hpp"
 
-Enemy::Enemy(): Ship(),_index(_indexS), _type(0) {
+Enemy::Enemy(): Ship(), _index(_indexS), _type(0) {
 	std::cout << "Enemy Created" << std::endl;
 	this->_indexS++;
 }

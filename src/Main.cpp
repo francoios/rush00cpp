@@ -2,6 +2,10 @@
 #include <ncurses.h>
 #include <unistd.h>
 
+# define SPACE 32
+# define ESC 27
+
+
 static GameCore game = GameCore();
 
 void	signalHandler(int sig)
@@ -11,14 +15,27 @@ void	signalHandler(int sig)
 	return ;
 }
 
+void	UserInput() {
+	game.player.setFire(false);
+	game.player.setAxeH(0);
+
+	int key_press = getch();
+	if (key_press == KEY_RIGHT)
+		game.player.setAxeH(1);
+	else if (key_press == SPACE)
+		game.player.setFire(true);
+	else if (key_press == KEY_LEFT)
+		game.player.setAxeH(-1);
+	else if (key_press == ESC)
+		exit(0);
+}
+
+
 void	Animate(void)
 {
-	char	**array = new char * [LINE];
+	char	**array;
 	int		c = -1;
-	while (++c < LINE)
-		array[c] = new char [COL];
 	array = game.decor.getTab();
-	c = -1;
 	while (++c < LINE)
 	{
 		printw("%s\n", array[c]);
@@ -33,7 +50,7 @@ int main(void)
 	signal(SIGWINCH, signalHandler);
 	while (1)
 	{
-		//UserInput();
+		UserInput();
 		Animate();
 		//DrawScene();
 		game.update();

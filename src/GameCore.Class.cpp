@@ -2,17 +2,17 @@
 
 GameCore::GameCore(void)
 {
-	ftime = FTime();
-	screen = Screen();
-	decor = Background();
+	// ftime = FTime();
+	// screen = Screen();
+	// decor = Background();
 	return ;
 }
 
 GameCore::GameCore(GameCore const & rhs)
 {
-	ftime = FTime();
-	screen = Screen();
-	decor = Background();
+	// ftime = FTime();
+	// screen = Screen();
+	// decor = Background();
 	(void)rhs;
 	return ;
 }
