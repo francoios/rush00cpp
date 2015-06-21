@@ -20,14 +20,14 @@ std::cout << "Background created" << std::endl;
 	this->_field[4] = ' ';
 	this->_field[5] = ' ';
 	this->_field[6] = ' ';
-	this->_field[7] = ' ';
+	this->_field[7] = '*';
 	this->_field[8] = ' ';
 	this->_field[9] = ' ';
 	this->_field[10] = ' ';
 	this->_field[11] = ' ';
 	this->_field[12] = ' ';
 	this->_field[13] = ' ';
-	this->_field[14] = '*';
+	this->_field[14] = ' ';
 	this->_field[15] = '\0';
 
 	int i = -1;

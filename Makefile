@@ -16,7 +16,8 @@ SRCS =	src/Main2.cpp\
 		src/Projectile.Class.cpp\
 		src/Screen.Class.cpp\
 		src/Ship.Class.cpp\
-		src/FTime.Class.cpp
+		src/FTime.Class.cpp\
+		src/User.Class.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
