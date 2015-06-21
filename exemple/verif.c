@@ -6,7 +6,7 @@
 /*   By: tdemay <tdemay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 06:07:01 by frcugy            #+#    #+#             */
-/*   Updated: 2015/02/28 17:26:48 by tdemay           ###   ########.fr       */
+/*   Updated: 2015/06/20 18:57:02 by qmuntada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void			startwin(t_env *env)
 	srand(time(0));
 	initscr();
 	start_color();
-	init_pair(1, COLOR_BLACK, 230);
+	init_pair(1, COLOR_PURPLE, 230);
 	init_pair(2, COLOR_BLACK, 180);
 	init_pair(3, COLOR_BLACK, 214);
 	init_pair(4, COLOR_BLACK, 208);
