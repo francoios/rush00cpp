@@ -1,5 +1,6 @@
 #ifndef USER_CLASS_HPP
 # define USER_CLASS_HPP
+# include <iostream>
 class User {
 public:
 

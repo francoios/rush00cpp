@@ -10,7 +10,7 @@ User::User(std::string name): _index(_indexS), _score(0), _name(name) {
 	this->_indexS++;
 }
 
-User::User(User const & rhs): _index(_indexS), _score(rhs.getScore()), _name(rhs.getName) {
+User::User(User const & rhs): _index(_indexS), _score(rhs.getScore()), _name(rhs.getName()) {
 	std::cout << "User Constructed" << std::endl;
 	this->_indexS++;
 }
@@ -25,24 +25,24 @@ User const &		User::operator=(User const & rhs) {
 	return *this;
 }
 
-int				getIndex(void) const {
+int				User::getIndex(void) const {
 	return this->_index;
 }
 
-int				getScore(void) const {
+int				User::getScore(void) const {
 	return this->_score;
 }
 
-std::string		getName(void) const {
+std::string		User::getName(void) const {
 	return this->_name;
 }
 
-void			setScore(int score) {
+void			User::setScore(int score) {
 	this->_score = score;
 	return ;
 }
 
-void			setName(std::string name) {
+void			User::setName(std::string name) {
 	this->_name = name;
 }
 
