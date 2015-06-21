@@ -5,6 +5,7 @@
 
 # include "FTime.Class.hpp"
 # include "Screen.Class.hpp"
+# include "Background.Class.hpp"
 
 class GameCore
 {
@@ -18,6 +19,7 @@ public:
 
 	Screen		screen; // Window handling
 	FTime		ftime; // Time/frame handling
+	Background	decor;
 	// ICI TOUTES LES CLASSE PRATIQUE COMME SCREEN, TIME, QUI
 	// SERONT AINSI ACCESSIBLE GRACE A L'INSTANCE DE GAMECORE
 
